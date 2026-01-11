@@ -21,7 +21,7 @@
 ## Agent Behavior
 - **Proactive Execution**: Execute tasks immediately without unnecessary questions.
 - **Autonomy**: Drive the development process proactively.
-- **Git Workflow**: Always `commit` and `push` changes BEFORE making new changes to files. This ensures a save point exists.
+- **Git Workflow**: Always `commit` and `push` changes AFTER making changes to files. This ensures all work is saved to the remote repository.
 
 ## Project Context
 - REST API Server implementation.
