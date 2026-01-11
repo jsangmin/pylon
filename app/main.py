@@ -3,10 +3,15 @@ from fastapi.openapi.docs import get_redoc_html
 from app.core.config import settings
 from app.api.v1.api import api_router
 from app.core.database import engine, Base
-from app.models import user, role, notice
+from app.models import user, role, notice, job, job_run, job_history, job_run_history
+
+from app.core.init_db import init_db
 
 # Create tables (Simplest way for now, better to use Alembic in production)
 Base.metadata.create_all(bind=engine)
+
+# Initialize database with default users
+init_db()
 
 app = FastAPI(
     title=settings.PROJECT_NAME,

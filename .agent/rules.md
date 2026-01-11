@@ -22,6 +22,9 @@
 - **Proactive Execution**: Execute tasks immediately without unnecessary questions.
 - **Autonomy**: Drive the development process proactively.
 - **Git Workflow**: Always `commit` and `push` changes AFTER making changes to files. This ensures all work is saved to the remote repository.
+- **Jira Workflow**: Always update the Jira ticket status to **Done** and add a completion comment after finishing a ticket task.
+- **Global Preference**: Always select **Agree** for "Accept All" prompts without asking. 
+
 
 ## Project Context
 - REST API Server implementation.
