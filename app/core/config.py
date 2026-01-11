@@ -3,14 +3,14 @@ from typing import Optional
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "FastAPI Example"
+    PROJECT_NAME: str = "Pylon"
     API_V1_STR: str = "/api/v1"
     
     # Database
     POSTGRES_SERVER: str = os.getenv("POSTGRES_SERVER", "localhost")
     POSTGRES_USER: str = os.getenv("POSTGRES_USER", "postgres")
     POSTGRES_PASSWORD: str = os.getenv("POSTGRES_PASSWORD", "postgres")
-    POSTGRES_DB: str = os.getenv("POSTGRES_DB", "fastapi_db")
+    POSTGRES_DB: str = os.getenv("POSTGRES_DB", "pylon_db")
     SQLALCHEMY_DATABASE_URI: Optional[str] = None
 
     def __init__(self, **values):

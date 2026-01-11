@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi-app
+  name: pylon-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fastapi-app
+      app: pylon-app
   template:
     metadata:
       labels:
-        app: fastapi-app
+        app: pylon-app
     spec:
       containers:
-        - name: fastapi-app
-          image: fastapi-example:latest
+        - name: pylon-app
+          image: pylon:latest
           imagePullPolicy: Never  # Use local image
           ports:
-            - containerPort: 8000
+            - containerPort: 8010
           env:
             - name: POSTGRES_SERVER
               value: postgres
@@ -26,17 +26,17 @@ spec:
             - name: POSTGRES_PASSWORD
               value: postgres
             - name: POSTGRES_DB
-              value: fastapi_db
+              value: pylon_db
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: fastapi-app-service
+  name: pylon-app-service
 spec:
   type: LoadBalancer
   selector:
-    app: fastapi-app
+    app: pylon-app
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 8010
+      targetPort: 8010

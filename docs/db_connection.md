@@ -4,8 +4,8 @@
 현재 실행 중인 Docker PostgreSQL에 접속하기 위한 정보입니다.
 
 - **Host**: `localhost`
-- **Port**: `5432`
-- **Database**: `fastapi_db`
+- **Port**: `5532`
+- **Database**: `pylon_db`
 - **Username**: `postgres`
 - **Password**: `postgres`
 

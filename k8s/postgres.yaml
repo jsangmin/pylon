@@ -23,7 +23,7 @@ spec:
             - name: POSTGRES_PASSWORD
               value: postgres
             - name: POSTGRES_DB
-              value: fastapi_db
+              value: pylon_db
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data

@@ -25,7 +25,7 @@ Use **Kubernetes (k8s)** when you want to verify the deployment configuration or
 
 1.  **Build Image**:
     ```bash
-    docker build -t fastapi-example:latest .
+    docker build -t pylon:latest .
     ```
 
 2.  **Deploy to local k8s**:
